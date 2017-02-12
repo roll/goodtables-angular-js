@@ -1,0 +1,121 @@
+.goodtables-angular-report {
+  color: #333;
+  font-family: monospace;
+  letter-spacing: -0.5px;
+}
+
+.goodtables-angular-report table {
+  border: 2px solid #5cb85c;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.goodtables-angular-report table.error {
+  border: 2px solid #d9534f;
+}
+
+.goodtables-angular-report table.summary {
+  width: 10em;
+}
+
+.goodtables-angular-report table.values {
+  min-width: 50em;
+}
+
+.goodtables-angular-report th {
+  background-color: #5cb85c;
+  color: #eee;
+}
+
+.goodtables-angular-report table.error th {
+  background-color: #d9534f;
+  color: #eee;
+}
+
+.goodtables-angular-report td {
+  background-color: #f9f9f9;
+}
+
+.goodtables-angular-report th,
+.goodtables-angular-report td {
+  padding: 10px 20px;
+  height: 1em;
+}
+
+.goodtables-angular-report th.active {
+  color: #fff;
+}
+
+.goodtables-angular-report table.values td {
+  cursor: pointer;
+}
+
+.goodtables-angular-report td.error {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.goodtables-angular-report td.row-number {
+  text-align: center;
+  padding: 10px 5px;
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.goodtables-angular-report td.errors {
+  padding: 10px 5px;
+  background-color: #eee;
+  color: #777;
+}
+
+.goodtables-angular-report h2 {
+  margin-bottom: 10px;
+}
+
+.goodtables-angular-report h3 {
+  display: inline-block;
+  color: #5cb85c;
+  margin: 10px 0;
+}
+
+.goodtables-angular-report h3.error {
+  color: #d9534f;
+  cursor: pointer;
+}
+
+.goodtables-angular-report h3.error:hover {
+  text-decoration: underline;
+}
+
+.goodtables-angular-report input {
+  display: none;
+}
+
+.goodtables-angular-report label {
+  width: 10em;
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+.goodtables-angular-report label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+.goodtables-angular-report input:checked + label {
+  color: #333;
+  border: 1px solid #d9534f;
+  border-top: 2px solid #d9534f;
+  border-bottom: 1px solid #fff;
+}
+
+.goodtables-angular-report p.help {
+  padding-left: 15px;
+  font-style: italic;
+  color: #888;
+}
