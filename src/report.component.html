@@ -1,3 +1,13 @@
 <div class="goodtables-angular-report">
   <h1>Report</h1>
+  <table class="summary" [class.error]="!report.valid">
+    <tbody>
+      <tr><th>valid</th><td>{{ (report.valid) ? 'yes' : 'no' }}</td></tr>
+      <tr><th>tables</th><td>{{ report['table-count'] }}</td></tr>
+      <tr><th>errors</th><td>{{ report['error-count'] }}</td></tr>
+      <tr><th>time</th><td>{{ report.time }}</td></tr>
+    </tbody>
+  </table>
+  <h2>Tables</h2>
+  <my-table *ngFor="let table of report.tables" [table]="table"></my-table>
 </div>

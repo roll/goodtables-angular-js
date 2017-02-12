@@ -5,8 +5,9 @@
         <ng-container *ngIf="row" >
           <tr (click)="toggleExpandedRow(rowNumber)">
             <td class="row-number">{{ rowNumber || 'H' }}</td>
-            <ng-container *ngFor="let value of rows[rowNumber].values; let colNumber = index">
-              <td *ngIf="colNumber" [class.error]="row.badcols.includes(colNumber)">
+            <ng-container *ngIf="colNumber">
+              <td *ngFor="let value of rows[rowNumber].values; let colNumber = index"
+                  [class.error]="row.badcols.includes(colNumber)">
                 {{ value }}
               </td>
             </ng-container>

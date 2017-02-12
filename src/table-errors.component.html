@@ -1,3 +1,20 @@
-<p>
-  TableErrors!
-</p>
+<div>
+  <table class="error">
+    <thead>
+      <tr>
+        <th>Row</th>
+        <th>Col</th>
+        <th>Code</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let error of table.errors">
+        <td>{{ error['row-number'] || 'H' }}</td>
+        <td>{{ error['column-number'] || '-' }}</td>
+        <td>{{ error.code }}</td>
+        <td>{{ error.message }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

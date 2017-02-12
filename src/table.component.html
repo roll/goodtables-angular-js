@@ -1,3 +1,23 @@
-<p>
-  Table!
-</p>
+<div>
+  <ng-container *ngIf="table.valid">
+    <h3>
+      {{ source }}
+      [{{ table['row-count'] }} rows/{{ table['error-count'] }} errors]
+    </h3>
+  </ng-container>
+  <ng-container *ngIf="!table.valid">
+    <h3 (click)="show = !show" class="error">
+      {{ source }}
+      [{{ table['row-count'] }} rows/{{ table['error-count'] }} errors]
+      [{{ (show) ? '-': '+' }}]
+    </h3>
+    <div *ngIf="show">
+      <input [id]="id1" type="radio" name="tabs" checked>
+      <label [for]="id1" (click)="values = false">Errors view</label>
+      <input [id]="id2" type="radio" name="tabs">
+      <label [for]="id2" (click)="values = true">Values view</label>
+      <my-table-values *ngIf="values" [table]="table"></my-table-values>
+      <my-table-errors *ngIf="!values" [table]="table"></my-table-errors>
+    </div>
+  </ng-container>
+</div>
